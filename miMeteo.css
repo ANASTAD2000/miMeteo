@@ -5,4 +5,13 @@ body {
     background-position: center; 
     height:100vh; /* Ensure the background covers the full viewport height */
   }
+  /* تنسيق المربع الكبير */
+.current-weather-container {
+  background: rgba(0, 0, 0, 0.5); /* خلفية شفافة */
+  height: 400px; /* ارتفاع المربع */
+  border-radius: 15px; /* حواف مستديرة */
+  color: white; /* لون النصوص */
+  font-size: 1.5rem; /* حجم النص */
+}
+
  
