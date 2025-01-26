@@ -42,6 +42,31 @@ searchButton.addEventListener("click", (e) => {
     tempValue.textContent = `${Math.round(data.main.temp)}°`; // Update temperature
     weatherIcon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`; // Update weather icon
   }
+
+                             // dom btn local me //
+
+  const localeButton = document.getElementById("localeButton");
+
+  // Add event  for the Locate Me button btn 
+localeButton.addEventListener("click", () => {
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const latitude = position.coords.latitude;
+          const longitude = position.coords.longitude;
+          fetchWeatherDataByLocation(latitude, longitude);
+        },
+        (error) => {
+          alert("Geolocation failed. Please enable location services.");
+        }
+      );
+    } else {
+      alert("Geolocation is not supported by your browser.");
+    }
+  });
+  
+
+
   
   
   
