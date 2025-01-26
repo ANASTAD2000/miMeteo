@@ -4,9 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="miMeteo.css" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
   <title>MiMétéo</title>
 </head>
 <body>
+  
   <!-- search -->
   <nav class="navbar bg-body-tertiary">
   <div class="container-fluid">
@@ -19,34 +22,44 @@
 <!-- local me -->
 <button id="localeButton" class="btn btn-light mb-4">Locate Me</button>
 
-<div class="container my-4">
-  <div class="row justify-content-center">
-      <div class="col-12 col-md-6">
-          <!-- Current Weather Section -->
-          <div class="current-weather-container d-flex flex-column justify-content-center align-items-center mt-6">
-              <h2 id="cityName" class="city-name text-white mb-3">Béni Mellal</h2>
-              <div class="temperature text-white mb-3">
-                  <span  id="tempValue" class="temp-value">25°</span>
-              </div>
-              <div  class="weather-icon">
-                  <img  id="weatherIcon" src="https://openweathermap.org/img/wn/02d@2x.png" alt="weather icon">
-                  
-                
-                </div>
+
+
+
+
+
+
+
+
+
+
+        <!-- Current Weather Section -->
+        <div class="current-weather-container d-flex flex-column justify-content-center align-items-center mt-6">
+          <h2 id="cityName" class="city-name  text-white mt-n7">Béni Mellal</h2>
+          <div class="temperature text-white mb-3">
+              <span  id="tempValue" class="temp-value display-2">25°</span>
+          </div>
+          <div  class="weather-icon ">
+              <img  id="weatherIcon" src="https://openweathermap.org/img/wn/02d@2x.png" alt="weather icon">
+              
+            
             </div>
+        </div>
 
 
-                  
-              </div>
+              
           </div>
       </div>
   </div>
 </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+</div>
 
 
-
-
-
+          
   <script src="miMeteo.js"></script>
   
 </body>

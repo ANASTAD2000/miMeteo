@@ -64,6 +64,33 @@ localeButton.addEventListener("click", () => {
       alert("Geolocation is not supported by your browser.");
     }
   });
+
+  // Function to fetch weather data by latitude and longitude
+function fetchWeatherDataByLocation(latitude, longitude) {
+    const apiKey = "6802f04ae1750fc890384ea73a25c188"; // Replace with your API key
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${apiKey}`;
+  
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.cod === 200) {
+          updateUI(data);
+        } else {
+          alert("Weather data not found. Please try again later.");
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+        alert("Something went wrong. Please try again later.");
+      });
+  }
+  
+  function updateUI(data) {
+    // Update the UI with weather data
+    cityName.textContent = data.name;
+    tempValue.textContent = `${Math.round(data.main.temp)}°`;
+    weatherIcon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+  }
   
 
 
