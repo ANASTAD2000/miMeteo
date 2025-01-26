@@ -11,23 +11,39 @@
   <nav class="navbar bg-body-tertiary">
   <div class="container-fluid">
     <form class="d-flex" role="search">
-      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success" type="submit">Search</button>
+      <input id="searchInput" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button   id="searchButton"  class="btn btn-outline-success" type="submit">Search</button>
     </form>
   </div>
 </nav>
 <!-- local me -->
 <button class="btn btn-light mb-4">Locate Me</button>
 
-<div class="container my-4"> 
-  <div class="row justify-content-center"> 
-    <div class="col-12 col-md-6"> 
-      <div class="current-weather-container d-flex flex-column justify-content-center align-items-center mt-6">
-        <!-- المربع الكبير فارغ حالياً -->
-      </div> 
-    </div> 
-  </div> 
+<div class="container my-4">
+  <div class="row justify-content-center">
+      <div class="col-12 col-md-6">
+          <!-- Current Weather Section -->
+          <div class="current-weather-container d-flex flex-column justify-content-center align-items-center mt-6">
+              <h2 id="cityName" class="city-name text-white mb-3">Béni Mellal</h2>
+              <div class="temperature text-white mb-3">
+                  <span  id="tempValue" class="temp-value">25°</span>
+              </div>
+              <div  class="weather-icon">
+                  <img  id="weatherIcon" src="https://openweathermap.org/img/wn/02d@2x.png" alt="weather icon">
+                  
+                
+                </div>
+            </div>
+
+
+                  
+              </div>
+          </div>
+      </div>
+  </div>
 </div>
+
+
 
 
 
@@ -35,3 +51,5 @@
   
 </body>
 </html>
+
+          
